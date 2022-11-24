@@ -15678,7 +15678,7 @@ GameObject:
   - component: {fileID: 796524824}
   - component: {fileID: 796524823}
   m_Layer: 5
-  m_Name: Fill
+  m_Name: HPLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15717,7 +15717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9056604, g: 0.071769245, b: 0.071769245, a: 1}
+  m_Color: {r: 0.1216447, g: 0.9622642, b: 0.31801552, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37492,7 +37492,7 @@ GameObject:
   - component: {fileID: 2000384966}
   - component: {fileID: 2000384967}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

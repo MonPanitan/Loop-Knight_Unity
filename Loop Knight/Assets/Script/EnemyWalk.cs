@@ -8,7 +8,7 @@ public class EnemyWalk : MonoBehaviour
     private Animator enemyAction;
     private Rigidbody enemyRb;
 
-    private float speed = 1.0f;
+    private float speed = 2.0f;
 
     //Player Position
     private Vector3 playerPos;

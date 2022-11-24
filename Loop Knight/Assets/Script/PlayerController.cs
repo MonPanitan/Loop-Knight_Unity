@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator playerMove;
     private GameObject player;
+    /*private int healthBar;*/
 
     public float horizontalInput;
     public float verticalInput;
@@ -18,10 +19,25 @@ public class PlayerController : MonoBehaviour
     private float lastClickTime; // capture last time click
     private const float doubleClickTime = 0.3f; // duration of time allows to double click
 
+    //Player Health
+    public int playerMaxHealth = 4;
+    public int playerHealth;
+
+    //HealthBar
+    public HealthBar healthBar;
+
+    //Player status
+    public bool playerAlive;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        playerAlive = true;
+        playerHealth = playerMaxHealth;
+        healthBar.SetMaxHealth(playerMaxHealth);
+
         player = GameObject.Find("Player");
         playerMove = GetComponent<Animator>();
         
@@ -37,15 +53,19 @@ public class PlayerController : MonoBehaviour
         pos.y = 0;
         transform.position = pos;
 
-        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+        if(playerAlive == true)
+        {
+            transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
-        transform.Rotate(Vector3.up * horizontalInput * Time.deltaTime * rotationSpeed);
+            transform.Rotate(Vector3.up * horizontalInput * Time.deltaTime * rotationSpeed);
 
-        //Movement Action
-        playerMovementCommand();
+            //Movement Action
+            playerMovementCommand();
 
-        //Attack command
-        playerAttackCommand();
+            //Attack command
+            playerAttackCommand();
+        }
+        
 
 
     }
@@ -97,5 +117,28 @@ public class PlayerController : MonoBehaviour
             lastClickTime = Time.time;
 
         }
+    }
+
+    //On trigger
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Sword")
+        {
+            playerHealth -= 1;
+            healthBar.SetHealth(playerHealth);
+            
+            if(playerHealth <= 0)
+            {
+                playerHealth = 0;
+                playerDie();
+            }
+        }
+    }
+
+    private void playerDie()
+    {
+        playerAlive = false;
+        playerMove.SetLayerWeight(2, 1);
+        playerMove.SetTrigger("Die");
     }
 }

@@ -17,6 +17,6 @@ public class Collision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Player Attack!!");
+        
     }
 }

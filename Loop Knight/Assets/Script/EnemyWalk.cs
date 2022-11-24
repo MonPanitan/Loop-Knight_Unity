@@ -15,7 +15,7 @@ public class EnemyWalk : MonoBehaviour
 
     //Attack player
     private float attackDistance = 3.0f;
-    public float attackTimer; // Cooldown time after attack //TEST
+    public float attackTimerCountDown; // Cooldown time after attack //TEST
     private float coolDown; // Cooldown time to set to be able to attack //
 
 
@@ -29,7 +29,7 @@ public class EnemyWalk : MonoBehaviour
         player = GameObject.Find("Player");
         enemyAction = GetComponent<Animator>();
         enemyRb = GetComponent<Rigidbody>();
-        attackTimer = 0;
+        attackTimerCountDown = 0;
         coolDown = 3.0f;
     }
 
@@ -60,20 +60,20 @@ public class EnemyWalk : MonoBehaviour
             }
             if (distanceBetween <= attackDistance)
             {
-                if (attackTimer > 0) // Check if timer more than 0
+                if (attackTimerCountDown > 0) // Check if timer more than 0
                 {
-                    attackTimer -= Time.deltaTime; // will reduce timer every 1 unit per frame
+                    attackTimerCountDown -= Time.deltaTime; // will reduce timer every 1 unit per frame
                 }
-                if (attackTimer < 0)// Check if timer == 0. Will to allow to attack
+                if (attackTimerCountDown < 0)// Check if timer == 0. Will to allow to attack
                 {
-                    attackTimer = 0;
+                    attackTimerCountDown = 0;
                 }
-                if (attackTimer == 0)
+                if (attackTimerCountDown == 0)
                 {
                     enemyAction.SetLayerWeight(1, 1);
                     attack();
                     Debug.Log("Playet Got A HIT!!!");
-                    attackTimer = coolDown;
+                    attackTimerCountDown = coolDown;
                 }
                 
 

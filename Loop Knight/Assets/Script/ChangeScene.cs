@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
     public string URL = "https://github.com/MonPanitan/Loop-Knight_Unity";
     public void GoToScene1()
     {
-        SceneManager.LoadScene("play");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void loadUrl()

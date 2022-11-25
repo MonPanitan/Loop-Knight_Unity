@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 15730587756302188}
   m_Layer: 0
   m_Name: PolyartSword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,9 +610,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   verticalInput: 0
-  speed: 10
-  rotationSpeed: 250
+  speed: 6
+  rotationSpeed: 220
   oneClick: 0
+  playerMaxHealth: 4
+  playerHealth: 0
+  healthBar: {fileID: 0}
+  playerAlive: 0
 --- !u!54 &198745993580243567
 Rigidbody:
   m_ObjectHideFlags: 0

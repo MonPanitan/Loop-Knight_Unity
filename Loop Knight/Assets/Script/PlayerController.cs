@@ -131,6 +131,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerHealth = 0;
                 playerDie();
+                
             }
         }
     }

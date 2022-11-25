@@ -1,4 +1,4 @@
-# Loop-Knight_Unity
+# Loop-Knight_Unity (Alpha)
  This is a basic game play of rougelike game called LoopKnight.
  In this game You will get to navigate through a dungeon, Enemy will walk toward you can trying to kill you
  There will be a boss fight later in Beta. Keep in touch :)

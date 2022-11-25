@@ -7,7 +7,7 @@
  Link to test a game:
  https://monpanitan.github.io/Loop-Knight_Unity/
  
- Control: W,A,S,D
+ Control: W,A,S,D \n
  Attack button: Space-Bar
  
  

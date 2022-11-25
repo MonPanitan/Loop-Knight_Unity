@@ -563,11 +563,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4505235612914124089}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33827883, y: 1.2508795, z: 0.4337984}
-  m_Center: {x: 0.012030095, y: 0.60374975, z: 0.014724597}
+  m_Size: {x: 0.33827883, y: 1.0426054, z: 0.4337984}
+  m_Center: {x: 0.012030095, y: 0.7078868, z: 0.014724597}
 --- !u!114 &5759988553363728378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d28e04746e1ca4a8a107fddf8cbb33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAlive: 1
+  enemyHealth: 0
   attackTimerCountDown: 0
   distanceBetween: 0
 --- !u!1 &4967994459699584600
@@ -1337,7 +1339,7 @@ GameObject:
   - component: {fileID: 8718172311501994388}
   m_Layer: 0
   m_Name: LowPolySkeleton_Sword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
